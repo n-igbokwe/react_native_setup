@@ -8,7 +8,11 @@ You can see two react folder in this repo:
 2 - React_test
 
 1 is the folder that I made from running the react native command in this repo;
-2 is the folder I made from running the react native command IN A DIFFERENT REPO - However, it contains working examples of the react native code I learnt - I copied the entire folder from a different vscode project. I say this because I'm not sure how (if at all) it effects its functionality. However, syntactically I believe the code is correct so use it as a guide.
+2 is a folder of code snippets from the first vscode project I made with react native - it has 2 files and they are both examples of correct code for adding routes / using state.
+
+I tried to make a github repo for the vscode project that these folders were initially contained in but I am dumb and my branches began to diverge so, we get this instead - sorry lmao
+
+----------
 
 
 Installing TypeScript
@@ -31,7 +35,7 @@ https://reactnative.dev/docs/environment-setup
 
 After installing react native, I tried to emmulate some of the functionality we had in our FE project - the first thing I did was routes - consider the below documentation to help you with this!
 
-For an example of this, consider the stack.jsx file in react_test/components
+For an example of this, consider the stack.jsx file in react_test/stack.jsx
 
 https://reactnative.dev/docs/navigation
 
@@ -39,7 +43,7 @@ https://reactnative.dev/docs/navigation
 
 After navigation, I learn about how state works in react native - again consider the below documentation
 
-For an example of this, consider the App.tsx file in react_test/App.tsx
+For an example of this, consider the App.tsx file in react_test/app.tsx
 
 https://reactnative.dev/docs/state
 

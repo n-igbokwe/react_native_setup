@@ -5,6 +5,7 @@ import axios from 'axios'
 import {NavigationContainer} from '@react-navigation/native'
 import { createNativeStackNavigator } from '@react-navigation/native-stack'
 // IMPORT GET REQUEST COMPONENT HERE
+// IMPORT POST REQUEST COMPONENT HERE
 
 type BlinkProps = {
   text: string
@@ -96,6 +97,8 @@ const App = () => {
       <Stack.Navigator>
         {/* THE BELOW STACKSCREEN IMPLEMENTS THE DATA FROM THE GET REQUEST */}
         <Stack.Screen name='getRequest' component={GetRequest} options={{title : 'getRequest'}}/>
+        {/* THE BELOW STACKSCREEN IMPLEMENTS THE DATA FROM THE POST REQUEST */}
+        <Stack.Screen name='POSTRequest' component={PostRequest} options={{title : 'CreateUser'}}/>
         <Stack.Screen name='blink' component={BlinkApp}/>
         <Stack.Screen name='Home' component={HomeScreen} options={{title: 'Home Page'}}/>
         <Stack.Screen name='Details' component={DetailsScreen} options={{title: 'Settings'}}/>

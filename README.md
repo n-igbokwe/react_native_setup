@@ -51,7 +51,8 @@ For an example of this, consider the App.tsx file in react_test/app.tsx
 https://reactnative.dev/docs/state
 
 -----------
-GET REQUESTS / USE EFFECT:
+
+GET REQUESTS / USE EFFECT [react_test/getRequestExample]
 
 No link for this one unforunately but it is very similar to making GET requests in react just with a few additional quirks.
 
@@ -73,6 +74,28 @@ After this, we just use View and Text coupled with the traditional map function 
 
 ----------
 
+POST REQUESTS / USE EFFECT [react_test/postRequestExample]
+
+No link again - the way I found of doing post requests is quite different from how I'm used to as it utilises ASYNC & AWAIT - but you may have used it previously so you might be better at it than me!
+
+The first thing we do, similar to the get request is define an interface called 'NewUser'. This interface outlines the strucutre of the object you want to send in your POST request.
+
+We useState to hold the actual data that we would like to post (note that you may be able to do this without setting state, while I am not sure how - it sounds reasonable).
+
+We then define the asynchronous function 'sendRequest' using the async keyword. Using asynch allows us to use await in our 'response' so that our code waits for the promise to resolve before moving onto the next line of code.
+
+The reason we have the 'Promise<void>' is because when we define a function with the async keyword it implicitly returns a promise. In this case, our sendrequest does not have a meaningul return value as it is a POST request - therefore, we make it clear that the promise returned by the function resolves to void.
+
+The axios post request returns a promise that resolves into an AxiosResponse object - this is the object we are consoling logging as it contains the response status and data.
+
+After this, we just have a button to help visualise the post api call a little clearer - we have data as a dependency so another API call is made when the data is changed.
+
+You should receive a 201 status if all is well.
+
+
+-------------------
+
+
 
 TROUBLESHOOTING
 
@@ -81,6 +104,7 @@ A: Try the following - after changing your app to app.tsx:
     - make sure you have imported in React (import React from 'react') <-- Make sure the first 'React' is uppercase!
     - if you are still seeing red, run the following command :  npm i --save-dev @types/react-native
     - the above command will import a bunch of node modules but we can just gitignore them later :)
+    - you will have to make a new .gitignore in the root of your project and put the new node modules inside there !
     This should fix your problem!
  
 

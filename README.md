@@ -33,6 +33,8 @@ https://reactnative.dev/docs/environment-setup
 
 ------------
 
+REACT NATIVE ROUTERS EQUIVALENT
+
 After installing react native, I tried to emmulate some of the functionality we had in our FE project - the first thing I did was routes - consider the below documentation to help you with this!
 
 For an example of this, consider the stack.jsx file in react_test/stack.jsx
@@ -41,6 +43,7 @@ https://reactnative.dev/docs/navigation
 
 -----------
 
+STATE / USE STATE
 After navigation, I learn about how state works in react native - again consider the below documentation
 
 For an example of this, consider the App.tsx file in react_test/app.tsx
@@ -48,5 +51,26 @@ For an example of this, consider the App.tsx file in react_test/app.tsx
 https://reactnative.dev/docs/state
 
 -----------
+GET REQUESTS / USE EFFECT:
+
+No link for this one unforunately but it is very similar to making GET requests in react just with a few additional quirks.
+
+Since we are using TypeScript, we first have to define the structure of the data we are expecting to receive back from our request - this is done with 'interface User'.
+
+After this, we make our function and define our useState like below:
+
+const [data, setData] = useState<User[]>([]);
+
+The end of this '([])' is what we are used to - setting the initial value of 'data' , for now we use an empty array '([])'.
+
+The section '<User[]>' is there to let React know that we are expecting the 'data' state variable to be an array of objects that conform to the 'interface User' variable we defined earlier. Again, I think this is just the point of TypeScript - to perform type checking on everything.
+
+Next we have the useEffect which again should be familiar - again we see the '<User[]>' which lets axios know we are trying to get an array of objects that fit the interface User variable we defined. 
+
+In the '.then' we have AxiosResponse - this is an interface provided by Axios in order to specificy the TYPE (hahaha typescript get it?) of the response data that we're expecting to receive from the API. As we are expecting to receive an array of 'user' objects we specify 'AxiosResponse<User[]>.
+
+After this, we just use View and Text coupled with the traditional map function to display our data on the screen.
+
+----------
 
 Thats about as far as I got - seems super similar to react and yeah that it :)

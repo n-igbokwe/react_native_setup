@@ -73,4 +73,15 @@ After this, we just use View and Text coupled with the traditional map function 
 
 ----------
 
+
+TROUBLESHOOTING
+
+Q: "I tried to change my App.js into an App.tsx and now React Native is complaining"
+A: Try the following - after changing your app to app.tsx:
+    - make sure you have imported in React (import React from 'react') <-- Make sure the first 'React' is uppercase!
+    - if you are still seeing red, run the following command :  npm i --save-dev @types/react-native
+    - the above command will import a bunch of node modules but we can just gitignore them later :)
+    This should fix your problem!
+ 
+
 Thats about as far as I got - seems super similar to react and yeah that it :)

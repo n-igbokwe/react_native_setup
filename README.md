@@ -95,6 +95,13 @@ You should receive a 201 status if all is well.
 
 -------------------
 
+PATCH REQUST [react_test/patchRequestExample]
+
+Honestly, pretty self-explanatory - but if you need anything just let me know
+
+
+
+-------------------
 
 
 TROUBLESHOOTING
@@ -107,5 +114,8 @@ A: Try the following - after changing your app to app.tsx:
     - you will have to make a new .gitignore in the root of your project and put the new node modules inside there !
     This should fix your problem!
  
+
+ Q: "React is still complaining at me and I have done everything"
+ A: Try adding react to your config files
 
 Thats about as far as I got - seems super similar to react and yeah that it :)

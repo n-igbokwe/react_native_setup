@@ -103,6 +103,11 @@ Honestly, pretty self-explanatory - but if you need anything just let me know
 
 -------------------
 
+DELETE REQUEST [react_test/deleteRequestExample]
+
+same as above 
+
+------------------
 
 TROUBLESHOOTING
 

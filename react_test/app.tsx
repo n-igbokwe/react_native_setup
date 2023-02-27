@@ -6,7 +6,8 @@ import {NavigationContainer} from '@react-navigation/native'
 import { createNativeStackNavigator } from '@react-navigation/native-stack'
 // IMPORT GET REQUEST COMPONENT HERE
 // IMPORT POST REQUEST COMPONENT HERE
-//IMPORT PATCH REQUEST COMPONENT HERE
+// IMPORT PATCH REQUEST COMPONENT HERE
+// IMPORT DELETE REQUEST COMPONENT HERE
 
 type BlinkProps = {
   text: string
@@ -96,12 +97,14 @@ const App = () => {
   return (
     <NavigationContainer>
       <Stack.Navigator>
-        {/* THE BELOW STACKSCREEN IMPLEMENTS THE DATA FROM THE GET REQUEST */}
+        {/* THE BELOW STACKSCREEN IMPLEMENTS THE GET REQUEST IMPORT*/}
         <Stack.Screen name='getRequest' component={GetRequest} options={{title : 'getRequest'}}/>
-        {/* THE BELOW STACKSCREEN IMPLEMENTS THE DATA FROM THE POST REQUEST */}
+        {/* THE BELOW STACKSCREEN IMPLEMENTS THE POST REQUEST IMPORT */}
         <Stack.Screen name='POSTRequest' component={PostRequest} options={{title : 'CreateUser'}}/>
-        {/* THE BELOW STACKSCREEN IMPLEMENTS THE DATA FROM THE PATCH REQUEST */}
+        {/* THE BELOW STACKSCREEN IMPLEMENTS THE PATCH REQUEST IMPORT */}
         <Stack.Screen name='patchRequest' component={PatchRequest} options={{title : 'patchRequest'}}/>
+        {/* THE BELOW STACKSCREEN IMPLEMENTS DELETE REQUEST IMPORT */}
+        <Stack.Screen name='DELETERequest' component={DeleteRequest} options={{title : 'deleteRequest'}}/>
         <Stack.Screen name='blink' component={BlinkApp}/>
         <Stack.Screen name='Home' component={HomeScreen} options={{title: 'Home Page'}}/>
         <Stack.Screen name='Details' component={DetailsScreen} options={{title: 'Settings'}}/>
